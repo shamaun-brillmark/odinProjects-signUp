@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap');
+
+* {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+body {
+    height: 100vh;
+    background-color: #0093E9;
+    background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+}
+
+.box {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    /* outline: 6px solid; */
+}
+
+.left {
+    /* outline: 1px solid; */
+    width: 50%;
+}
+
+.right {
+    /* outline: 1px solid red; */
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    font-weight: 900;
+    font-size: 60px;
+    font-family: 'Lexend Deca', sans-serif;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    border-radius: 10px;
+}
+
+label {
+    /* outline: 1px solid white; */
+    width: 210px;
+}
+
+label.incorrect::after {
+    content: " ❌";
+}
+
+label.correct::after {
+    content: " ✔";
+}
+label, input[type="text"],
+input[type="email"],
+input[type="date"],
+ input[type="password"],
+  input::placeholder{
+    font-size: 20px;
+}
+input[type="text"], input[type="email"],input[type="date"], input[type="password"]{
+    padding-left: 10px;
+}
+form ul {
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+form li,
+form button {
+    font-size: 30px;
+    /* outline:1px solid blue; */
+}
+
+form li {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+.row {
+    /* outline: 1px solid green; */
+    width: 100%;
+    display: flex;
+    gap: 1em;
+}
+
+.row li {
+    width: 50%;
+    height: 100%;
+}
+
+model-viewer {
+    width: auto;
+    height: 100%;
+}
+
+input, form button{
+    height: 45px;
+    border-radius: 5px;
+}
+
+input {
+    background-color: transparent;
+    border: 1px solid;
+
+}
+
+input:focus {
+    outline: 2px solid rgb(1, 87, 113);
+}
+
+input::placeholder {
+    color: rgb(82, 82, 82)
+}
+
+form p {
+    font-size: 15px;
+}
+
+form button {
+    font-weight: 800;
+    background-color: transparent;
+}
+
+form button:hover {
+    background-color: black;
+    color: white;
+    transition: 1s;
+}
+
+.display-error {
+    visibility: visible;
+}
+
+.error-message {
+    color: rgb(131, 3, 3);
+    visibility: hidden;
+}
+
+a {
+    color: #003c5f
+}
+
+@media screen and (max-width:1300px) {
+    .box {
+        flex-direction: column;
+    }
+
+    .left {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media screen and (max-width:550px) {
+    h1 {
+        font-size: 40px;
+    }
+
+    .left {
+        width: 100%;
+        height: 100px;
+    }
+
+    body {
+        height: auto;
+    }
+
+    label {
+        width: auto;
+    }
+    form ul {
+        gap: 1em;
+    }
+
+    .box {
+        height: auto;
+    }
+
+    form li,
+    form button {
+        font-size: 20px;
+        /* outline:1px solid blue; */
+    }
+
+    .row {
+        flex-direction: column;
+        gap: 0;
+    }
+}
